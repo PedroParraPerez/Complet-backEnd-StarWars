@@ -50,6 +50,9 @@ def get_all_planets():
     planet_list =  list(map(lambda planet: planet.serialize(), planets))
     return ({"results":planet_list}), 200
 
+# ..................................GET one user or character or planet......................
+
+
 @app.route('/user/<int:id>', methods=['GET'])
 def get_one_user(id):
     user = User.query.get(id)
